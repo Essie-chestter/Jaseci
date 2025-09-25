@@ -47,16 +47,19 @@ At its heart is **Jac**, a **superset of Python** that introduces new abstractio
 
 ---
 
-  🔧 Installation
 
-- **Install both Jac and Jaseci from PyPI:
 
-    pip install jaclang jaseci
+## 🔧 Installation
 
-- **Verify installation:
+**Install both Jac and Jaseci from PyPI:**
 
-    jac --version
-    jsctl -h
+```bash
+pip install jaclang jaseci
+
+## verification 
+
+jac --version
+jsctl -h
 
 
 ---
