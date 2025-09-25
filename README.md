@@ -45,53 +45,6 @@ At its heart is **Jac**, a **superset of Python** that introduces new abstractio
 └── README.md            # This file
 
 
----
 
-## Installation & Setup
-
-<details>
-<summary><strong>Install from PyPI (Recommended)</strong></summary>
-
-<br>
-
-Get the complete, stable toolkit from PyPI:
-```bash
-pip install jaclang[all]
-```
-This is the fastest way to get started with building applications.
-
-</details>
-
-<details>
-<summary><strong>Install from Source (For Contributors)</strong></summary>
-
-<br>
-
-If you plan to contribute to Jaseci, install it in editable mode from a cloned repository:
-```bash
-git clone https://github.com/Jaseci-Labs/jaseci.git
-cd jaseci
-```
-This will install all development dependencies, including testing and linting tools.
-
-</details>
-
-
-## Command-Line Interface (CLI)
-
-The `jac` CLI is your primary interface for interacting with the Jaseci ecosystem.
-
-| Command | Description |
-| :--- | :--- |
-| **`jac run <file.jac>`** | Executes a Jac file, much like `python3`. |
-| **`jac build <file.jac>`** | Builds a self-contained Jac application from a source file. |
-| **`jac serve <file.jac>`** | Executes a Jac file to the cloud. |
-
-
-
-
-
-
----
 
 
