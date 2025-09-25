@@ -1,30 +1,32 @@
-walker smart_chatbot {
-    can greet_responses = ["Hey there!", "Hello!", "Hi, friend!", "Greetings! 👋"];
-    can mood_responses = ["I’m doing great!", "Feeling awesome today!", "Just chilling in the graph world.", "Happy to chat with you!"];
+walker chatbot {
+    has string user_input;
+    has string response;
 
+    // Entry point
     start {
-        std.out("🤖 Hi! I’m your smarter Jac chatbot.");
-        std.out("What’s your name?");
-        user_name = std.in();
-        std.out("Nice to meet you, " + user_name + "!");
+        std.out("Hello! I'm your simple chatbot. Type 'exit' to quit.");
+        loop {
+            std.out("You: ");
+            user_input = std.in();
 
-        std.out("You can chat with me. (Type 'bye' to exit)");
-
-        while (true) {
-            msg = std.in();
-
-            if (msg == "hi" or msg == "hello") {
-                std.out(rand(greet_responses));   # pick random greeting
-            } else if (msg == "how are you") {
-                std.out(rand(mood_responses));    # random mood reply
-            } else if (msg == "who are you") {
-                std.out("I’m a Jac-powered chatbot 🤖 built just for you, " + user_name + "!");
-            } else if (msg == "bye") {
-                std.out("Goodbye, " + user_name + "! 👋 Talk soon.");
+            if (user_input == "exit") {
+                response = "Goodbye! Have a great day.";
+                std.out("Bot: " + response);
                 break;
-            } else {
-                std.out("Sorry, I don’t know how to reply to: " + msg);
             }
+
+            // Basic responses
+            if (user_input == "hello" || user_input == "hi") {
+                response = "Hi there! How can I help you today?";
+            } else if (user_input == "how are you") {
+                response = "I'm just a bunch of code, but I'm doing great!";
+            } else if (user_input == "what's your name") {
+                response = "I'm a JAC-powered chatbot. You can call me JACBot.";
+            } else {
+                response = "Sorry, I didn't understand that. Try asking something else.";
+            }
+
+            std.out("Bot: " + response);
         }
     }
 }
