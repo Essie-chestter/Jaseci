@@ -47,117 +47,49 @@ At its heart is **Jac**, a **superset of Python** that introduces new abstractio
 
 ---
 
+## Installation & Setup
 
+<details>
+<summary><strong>Install from PyPI (Recommended)</strong></summary>
 
-## 🔧 Installation
+<br>
 
-**Install both Jac and Jaseci from PyPI:**
-
+Get the complete, stable toolkit from PyPI:
 ```bash
-pip install jaclang jaseci
+pip install jaclang[all]
+```
+This is the fastest way to get started with building applications.
 
-## verification 
+</details>
 
-jac --version
-jsctl -h
+<details>
+<summary><strong>Install from Source (For Contributors)</strong></summary>
 
+<br>
 
----
+If you plan to contribute to Jaseci, install it in editable mode from a cloned repository:
+```bash
+git clone https://github.com/Jaseci-Labs/jaseci.git
+cd jaseci
+```
+This will install all development dependencies, including testing and linting tools.
 
- 🚀 Getting Started
-
-Example 1: Hello World
-
-hello.jac
-
-print("Hello, Jac!");
-
-object Rectangle {
-    has width: float, height: float;
-
-    can area(self) {
-        return self.width * self.height;
-    }
-}
-
-can start {
-    rect = Rectangle(10, 5);
-    print("Area:", rect.area());
-}
-
-Run it:
-
-jac run hello.jac
+</details>
 
 
----
+## Command-Line Interface (CLI)
 
- Example 2: AI-Powered Function (LLM Integration)
+The `jac` CLI is your primary interface for interacting with the Jaseci ecosystem.
 
-Jac allows replacing function bodies with AI model calls:
-
-object Assistant {
-    can chat(self, prompt: str) =:: "openai/gpt-4" :: {
-        "You are a helpful assistant. Answer the user query clearly."
-    };
-}
-
-can start {
-    bot = Assistant();
-    response = bot.chat("Explain quantum computing simply.");
-    print("🤖 AI says:", response);
-}
-
-Here:
-
-=:: "openai/gpt-4" :: { ... } defines an AI-powered function.
-
-The runtime will call the AI model with your prompt and return results.
+| Command | Description |
+| :--- | :--- |
+| **`jac run <file.jac>`** | Executes a Jac file, much like `python3`. |
+| **`jac build <file.jac>`** | Builds a self-contained Jac application from a source file. |
+| **`jac serve <file.jac>`** | Executes a Jac file to the cloud. |
 
 
 
----
 
-  📚 Documentation
-
--🌐 **Jac Language Guide
-
--⚡ **Jaseci Runtime Docs
-
--🧑‍💻 **GitHub – Jaseci Labs
-
--📄 **Jac Language Research Paper (arXiv)
-
-
-
----
-
- 🤝 Contributing
-
-** If you want to make a contribution
-
-1. Fork this repo
-
-
-2. Create a feature branch:
-
-git checkout -b feature/my-feature
-
-
-3. Commit changes:
-
-git commit -m "Add my feature"
-
-
-4. Push and create a PR
-
-
-
----
-
- 📜 License
-
--This project is licensed under the Apache 2.0 License.
 
 
 ---
