@@ -1,30 +1,30 @@
-object Chatbot {
-    // This function's logic is powered by an AI model
-    can chat(self, prompt: str) =:: "openai/gpt-4" :: {
-        "You are a helpful assistant. Keep your answers concise and conversational."
-    };
-}
+walker smart_chatbot {
+    can greet_responses = ["Hey there!", "Hello!", "Hi, friend!", "Greetings! 👋"];
+    can mood_responses = ["I’m doing great!", "Feeling awesome today!", "Just chilling in the graph world.", "Happy to chat with you!"];
 
-can start {
-    // Create an instance of our Chatbot
-    bot = Chatbot();
-    
-    // Start an infinite loop to chat with the user
-    print("Welcome to the Jac Chatbot! Type 'exit' to quit.");
-    
-    while (true) {
-        // Get input from the user
-        user_input = input("You: ");
-        
-        // Check for the exit command
-        if (user_input == "exit") {
-            break;
+    start {
+        std.out("🤖 Hi! I’m your smarter Jac chatbot.");
+        std.out("What’s your name?");
+        user_name = std.in();
+        std.out("Nice to meet you, " + user_name + "!");
+
+        std.out("You can chat with me. (Type 'bye' to exit)");
+
+        while (true) {
+            msg = std.in();
+
+            if (msg == "hi" or msg == "hello") {
+                std.out(rand(greet_responses));   # pick random greeting
+            } else if (msg == "how are you") {
+                std.out(rand(mood_responses));    # random mood reply
+            } else if (msg == "who are you") {
+                std.out("I’m a Jac-powered chatbot 🤖 built just for you, " + user_name + "!");
+            } else if (msg == "bye") {
+                std.out("Goodbye, " + user_name + "! 👋 Talk soon.");
+                break;
+            } else {
+                std.out("Sorry, I don’t know how to reply to: " + msg);
+            }
         }
-        
-        // Get a response from the AI model and print it
-        response = bot.chat(user_input);
-        print("Bot: ", response);
     }
-    
-    print("Goodbye!");
 }
