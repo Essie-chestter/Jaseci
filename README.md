@@ -47,23 +47,23 @@ At its heart is **Jac**, a **superset of Python** that introduces new abstractio
 
 ---
 
-🔧 #Installation
+##  🔧 Installation
 
-Install both Jac and Jaseci from PyPI:
+- **Install both Jac and Jaseci from PyPI:
 
-pip install jaclang jaseci
+    pip install jaclang jaseci
 
-Verify installation:
+- **Verify installation:
 
-jac --version
-jsctl -h
+    jac --version
+    jsctl -h
 
 
 ---
 
-🚀 Getting Started
+##  🚀 Getting Started
 
-Example 1: Hello World
+#  Example 1: Hello World
 
 hello.jac
 
@@ -89,7 +89,7 @@ jac run hello.jac
 
 ---
 
-Example 2: AI-Powered Function (LLM Integration)
+#  Example 2: AI-Powered Function (LLM Integration)
 
 Jac allows replacing function bodies with AI model calls:
 
@@ -115,23 +115,23 @@ The runtime will call the AI model with your prompt and return results.
 
 ---
 
-📚 Documentation
+##  📚 Documentation
 
-🌐 Jac Language Guide
+-🌐 **Jac Language Guide
 
-⚡ Jaseci Runtime Docs
+-⚡ **Jaseci Runtime Docs
 
-🧑‍💻 GitHub – Jaseci Labs
+-🧑‍💻 **GitHub – Jaseci Labs
 
-📄 Jac Language Research Paper (arXiv)
+-📄 **Jac Language Research Paper (arXiv)
 
 
 
 ---
 
-🤝 Contributing
+##  🤝 Contributing
 
-We welcome contributions!
+** If you want to make a contribution
 
 1. Fork this repo
 
@@ -152,9 +152,9 @@ git commit -m "Add my feature"
 
 ---
 
-📜 License
+##  📜 License
 
-This project is licensed under the Apache 2.0 License.
+-This project is licensed under the Apache 2.0 License.
 
 
 ---
