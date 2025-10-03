@@ -6,7 +6,19 @@ An AI-Powered Multimodal MCP Chatbot built using Jac.
 
 The chatbot can:
 - Upload and chat with PDFs, text files, images, and videos.
-- `server.jac` (automatically imported by Jac).
+- Search your documents and provide context-aware answers.
+- Answer general questions using web search.
+- Understand and discuss images and videos using AI vision.
+- Route different types of questions to specialized AI handlers.
+
+---
+
+## Project Structure
+
+
+1. **client.jac**: The web interface for chat and file uploads.
+2. **server.jac**: The main application using Object Spatial Programming.
+3. **server.impl.jac**: Implementation details and function bodies for `server.jac` (automatically imported by Jac).
 4. **mcp_server.jac**: Tool server for document search and web search.
 5. **mcp_client.jac**: Interface to communicate with tools.
 6. **tools.jac**: Document processing and search.
